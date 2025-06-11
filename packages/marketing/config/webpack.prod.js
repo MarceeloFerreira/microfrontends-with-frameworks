@@ -6,7 +6,9 @@ const packageJson = require('../package.json');
 const prodConfig = {
   mode: 'production',
   output: {
-    filename: '[name].[contenthash].js'
+    filename: '[name].[contenthash].js',
+    // path that is on the s3 bucket
+    publicPath: '/marketing/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
